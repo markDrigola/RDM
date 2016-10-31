@@ -1,4 +1,6 @@
-@font-face {}
+@font-face {
+  font-family: "gara";
+  src: url("../font/garamond/gara.ttf");}
 @font-face {
   font-family: "lato-r";
   src: url("../font/lato/Lato-Regular.ttf"); }

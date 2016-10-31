@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.parallax-window').parallax({
         positionY: '-400px',
         naturalWidth: 90,
-        naturalHeight: 100,
+        naturalHeight: 0,
         speed: 0.4
         //imageSrc: "images/bg-screen.jpg"
     });
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
         //Scrolling
         css3: true,
-        scrollingSpeed: 2000,
+        scrollingSpeed: 1500,
         autoScrolling: true,
         fitToSection: true,
         fitToSectionDelay: 1000,
@@ -40,7 +40,8 @@ $(document).ready(function() {
         interlockedSlides: true,
         resetSliders: false,
         fadingEffect: false,
-        normalScrollElements: '.section_03333, .element2',
+        // normalScrollElements: '.section_04, .footer',
+        // normalScrollElements: '.footer',
         scrollOverflow: false,
         scrollOverflowOptions: false,
         touchSensitivity: 15,
@@ -54,13 +55,13 @@ $(document).ready(function() {
 
         //Design
         controlArrows: true,
-        verticalCentered: true,
+        verticalCentered: false,  //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         //sectionsColor : ['#ff0000', '#fff'],
         paddingTop: '3em',
         paddingBottom: '10px',
-        fixedElements: '#header, .footer',
-        responsiveWidth: 0,
-        responsiveHeight: 0,
+        fixedElements: '#header, footer',
+        responsiveWidth: false,
+        responsiveHeight: false,
         responsiveSlides: false,
 
         //Custom selectors
@@ -69,32 +70,77 @@ $(document).ready(function() {
 
         //events
         onLeave: function(index, nextIndex, direction){
+            if(index == 1) {
+                $('.orange-logo').css({'opacity':'0'});
+            }
+            if(index == 2) {
+                $('.white-logo').css({'opacity':'0'});
+            }
+
+            if(index == 3) {
+                $('.orange-logo').css({'opacity':'0'});
+            }
+
+            if(index == 4) {
+                $('.orange-logo').css({'opacity':'0'});
+            }
+
+            if(index == 5) {
+                $('.white-logo').css({'opacity':'0'});
+            }
+
             if(index == 3 && nextIndex == 4){
-                if($('.thirdAnim').hasClass('activesList3')) {
-                    return true;
-                }
-                return false;
-            }
+    if($('.thirdAnim').hasClass('activesList3')) {
+        return true;
+    }
+    return false;
+}
 
-            if(index == 3 && nextIndex == 2){
-                if(!($('.firstAnim').hasClass('activesList1'))) {
-                    return true;
-                }
-                return false;
-            }
-        },
-        afterLoad: function(anchorLink, index){
+if(index == 3 && nextIndex == 2){
+    if(!($('.firstAnim').hasClass('activesList1'))) {
+        return true;
+    }
+    return false;
+}
+            },
 
-        },
+            afterLoad: function(anchorLink, index){
+                if(index == 1) {
+                    $('.logo2').css({'display':'none'});
+                    $('.white-logo').css({'opacity':'0'});
+                    $('.orange-logo').css({'opacity':'1'});
+                }
+                if(index == 2) {
+                    $('.logo2').css({'display':'none'});
+                    $('.orange-logo').css({'opacity':'0'});
+                    $('.white-logo').css({'opacity':'1'});
+
+                }
+                if(index == 3) {
+                    $('.logo2').css({'display':'none'});
+                    $('.white-logo').css({'opacity':'0'});
+                    $('.orange-logo').css({'opacity':'1'});
+                }
+                if(index == 4) {
+                    $('.logo2').css({'display':'none'});
+                    $('.white-logo').css({'opacity':'0'});
+                    $('.orange-logo').css({'opacity':'1'});
+                }
+                if(index == 5) {
+                    $('.logo2').css({'display':'block'});
+                    $('.orange-logo').css({'opacity':'0'});
+                    $('.white-logo').css({'opacity':'1'});
+                }
+            },
+
         afterRender: function(){},
         afterResize: function(){},
         afterResponsive: function(isResponsive){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
-
-        },
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 
+    var flagLogo = 0;
     $(".burger-menu").on('click', function(){
         $(this).addClass('open-menu');
         $('body').addClass('open-menu');
@@ -251,8 +297,6 @@ $(document).ready(function() {
             // $('.rightBlockTextBot').fadeOut(1300);
             $('.rightBlockTextBot').removeClass('rightBlockTextBotFade');
         }
-
-
         // }
     });
 
