@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css" rel="stylsheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>-->
+    <style>
+        .wrapperAll {
+            width: 400px;
+            height: 1400px;
+            border: 1px solid red;
+            overflow: hidden;
+            position: relative;
+            display: table;
+        }
+        body {
+            /*background: black;*/
+        }
+
+        .circlesRotate {
+            animation: circlesRotate 2.8s cubic-bezier(0, 0, 0.07, 1.02);
+        }
+
+        .lineFade {
+            animation: lineFade 1s linear 1s;
+        }
+
+        .wrapLine {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            display: table-cell;
+
+        }
+
+        #myCanvas {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /*transform: rotateX(180deg);*/
+        }
+
+        @keyframes circlesRotate {
+            0% {
+                transform: rotate(170deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /*@keyframes lineFade {*/
+            /*0% {*/
+                /*height: 0;*/
+                /*opacity: 1;*/
+                /*top: 60%;*/
+                /*left: 36%;*/
+            /*}*/
+
+            /*100% {*/
+                /*height: 40px;*/
+                /*top: 55%;*/
+                /*left: 36%;*/
+                /*opacity: 1;*/
+            /*}*/
+        /*}*/
+
+        /*.lineFirst {*/
+            /*position: absolute;*/
+            /*width: 1px;*/
+            /*height: 40px;*/
+            /*background: black;*/
+            /*margin: auto;*/
+            /*top: 55%;*/
+            /*left: 36%;*/
+            /*opacity: 0;*/
+            /*transform: rotate(230deg);*/
+        /*}*/
+
+        /*.lineSecond {*/
+            /*position: absolute;*/
+            /*width: 40px;*/
+            /*height: 1px;*/
+            /*background: black;*/
+            /*margin: auto;*/
+            /*top: 39%;*/
+            /*right: 53%;*/
+            /*opacity: 0;*/
+            /*transform: translate3d(84px,0,0) rotate(140deg);*/
+        /*}*/
+
+        /*.circleFirst {*/
+            /*width: 10px;*/
+            /*height: 10px;*/
+            /*border: 1px solid black;*/
+            /*border-radius: 50%;*/
+            /*position: absolute;*/
+            /*top: -12px;*/
+            /*right: -6px;*/
+        /*}*/
+
+        /*.circleSecond {*/
+            /*width: 10px;*/
+            /*height: 10px;*/
+            /*border: 1px solid black;*/
+            /*border-radius: 50%;*/
+            /*position: absolute;*/
+            /*top: -6px;*/
+            /*left: -12px;*/
+        /*}*/
+        .dotet {
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapperAll">
+    <div class="wrapLine">
+        <div class="lineFirst">
+            <div class="circleFirst"></div>
+        </div>
+        <div class="lineSecond">
+            <div class="circleSecond"></div>
+        </div>
+        <canvas id="myCanvas" width="200" height="200" ></canvas>
+    </div>
+</div>
+<div data-aos="fade" class="dotet"></div>
+<button class="">dotet</button>
+<script>
+    AOS.init({
+        duration: 1200
+    });
+
+    var c = document.getElementById("myCanvas");
+        ctx = c.getContext("2d"),
+        line = c.getContext("2d"),
+        int1 = 6,
+        lineWidth = 0,
+        timerSpeed = 70,
+        lineIntX = 0,
+        lineIntY = 0;
+    $('#myCanvas').addClass('circlesRotate');
+            var interId = setInterval(function () {
+                int1 -= 0.1;
+                timerSpeed +=0.5;
+                lineWidth += 0.01;
+                ctx.beginPath();
+                ctx.arc(100, 100, 50, int1, 2*Math.PI);
+                ctx.fillStyle = 'transparent';
+                ctx.fill();
+                ctx.lineWidth = lineWidth;
+                ctx.strokeStyle = 'black';
+                ctx.stroke();
+
+                if(int1 <= 0) {
+
+                    clearInterval(interId);
+                }
+            },20);
+
+    setTimeout(function () {
+        var lineFInt = setInterval(function () {
+            lineIntX++;
+            lineIntY--;
+            line.moveTo(135, 65);
+            line.lineTo(135 + lineIntX , 65 + lineIntY );
+            line.lineWidth = 2; // толщина линии
+            line.strokeStyle = "black"; // цвет линии
+            line.stroke();
+            if(135 + lineIntX == 160) {
+                clearInterval(lineFInt);
+            }
+        },20);
+    },1000);
+
+    var int2 =  6;
+    setTimeout(function () {
+        var arc2 = c.getContext("2d");
+        var arc2Int = setInterval(function () {
+            int2 -= 0.1;
+
+            arc2.beginPath();
+            arc2.arc(167, 33, 10, int2, 2*Math.PI);
+            arc2.fillStyle = 'transparent';
+            //arc2.fill();
+            arc2.lineWidth = 1.5;
+            arc2.strokeStyle = 'black';
+            arc2.stroke();
+
+            if(int2 <= 0) {
+                clearInterval(arc2Int);
+            }
+        },10);
+        console.log(int2);
+    },1500);
+</script>
+
+</body>
+</html>
+
+
+<!--//backUp-->
+<!--var flag = 0;-->
+<!--var c = document.getElementById("myCanvas");-->
+<!--arc1 = c.getContext("2d"),-->
+
+<!--line2 = c.getContext("2d"),-->
+<!--line3 = c.getContext("2d"),-->
+<!--int1 = 6,-->
+<!--lineWidth = 0,-->
+<!--timerSpeed = 70,-->
+<!--lineIntX = 0,-->
+<!--lineIntY = 0;-->
+
+<!--$('#myCanvas').addClass('circlesRotate');-->
+<!--$(window).on("scroll", function() {-->
+<!--if($(window).scrollTop() > 650 && flag == 0) {-->
+<!--$('#myCanvas').css({'display':'block'});-->
+<!--$('#myCanvas').addClass('circlesRotate');-->
+<!--var interId = setInterval(function () {-->
+<!--int1 -= 0.1;-->
+<!--timerSpeed +=0.5;-->
+<!--lineWidth += 0.01;-->
+<!--arc1.beginPath();-->
+<!--arc1.arc(300, 300, 250, int1, 2*Math.PI);-->
+<!--arc1.fillStyle = 'transparent';-->
+<!--arc1.fill();-->
+<!--arc1.lineWidth = 0.2;-->
+<!--arc1.strokeStyle = '#fff';-->
+<!--arc1.stroke();-->
+
+<!--if(int1 <= 0) {-->
+<!--clearInterval(interId);-->
+<!--}-->
+<!--},120);-->
+
+<!--//             setTimeout(function () {-->
+<!--//                 var line = c.getContext("2d");-->
+<!--//                 var lineFInt = setInterval(function () {-->
+<!--//                     lineIntX++;-->
+<!--//                     lineIntY&#45;&#45;;-->
+<!--//                     line.moveTo(475, 125);-->
+<!--//                     line.lineTo(488 + lineIntX , 112 + lineIntY );-->
+<!--//                     line.lineWidth = 1; // толщина линии-->
+<!--//                     line.strokeStyle = "white"; // цвет линии-->
+<!--//                     line.stroke();-->
+<!--//                     if(lineIntX >= 25) {-->
+<!--//                         clearInterval(lineFInt);-->
+<!--//                     }-->
+<!--//                 },100);-->
+<!--//                 var lineFInt2 = setInterval(function () {-->
+<!--//                     lineIntX++;-->
+<!--//                     lineIntY&#45;&#45;;-->
+<!--//                     line2.moveTo(89,511 );-->
+<!--//                     line2.lineTo(65 + lineIntX , 535 + lineIntY );-->
+<!--//                     line2.lineWidth = 1; // толщина линии-->
+<!--//                     line2.strokeStyle = "white"; // цвет линии-->
+<!--//                     line2.stroke();-->
+<!--//                     if(lineIntX >= 26) {-->
+<!--//                         clearInterval(lineFInt2);-->
+<!--//                     }-->
+<!--//                 },100);-->
+<!--//-->
+<!--// //                                    var lineFInt3 = setInterval(function () {-->
+<!--// //                                        lineIntX++;-->
+<!--// //                                        lineIntY&#45;&#45;;-->
+<!--// //                                        line3.beginPath();-->
+<!--// //                                        line3.moveTo(300,300 );-->
+<!--// //                                        line3.lineTo(250  , 350  );-->
+<!--// //                                        line3.lineWidth = 1; // толщина линии-->
+<!--// //                                        line3.strokeStyle = "white"; // цвет линии-->
+<!--// //                                        line3.stroke();-->
+<!--// //                                        if(lineIntX >= 26) {-->
+<!--// //                                            clearInterval(lineFInt3);-->
+<!--// //                                        }-->
+<!--// //                                    },100);-->
+<!--//-->
+<!--//-->
+<!--//             },2400);-->
+<!--var int2 =  6;-->
+<!--setTimeout(function () {-->
+<!--// var arc2 = c.getContext("2d");-->
+<!--// var arc2Int = setInterval(function () {-->
+<!--//     int2 -= 0.1;-->
+<!--//     arc2.beginPath();-->
+<!--//     arc2.arc(542, 58, 10, int2, 2*Math.PI);-->
+<!--//     arc2.fillStyle = 'transparent';-->
+<!--//     arc2.lineWidth = 1;-->
+<!--//     arc2.strokeStyle = 'white';-->
+<!--//     arc2.stroke();-->
+<!--//-->
+<!--//     if(int2 <= 0) {-->
+<!--//         clearInterval(arc2Int);-->
+<!--//     }-->
+<!--// },10);-->
+<!--// var int3 =  6;-->
+<!--//-->
+<!--// var arc3 = c.getContext("2d");-->
+<!--// var arc3Int = setInterval(function () {-->
+<!--//     int3 -= 0.1;-->
+<!--//     arc3.beginPath();-->
+<!--//     arc3.arc(58, 542, 10, int3, 2*Math.PI);-->
+<!--//     arc3.fillStyle = 'transparent';-->
+<!--//     arc3.lineWidth = 1;-->
+<!--//     arc3.strokeStyle = 'white';-->
+<!--//     arc3.stroke();-->
+<!--//-->
+<!--//     if(int3 <= 0) {-->
+<!--//         clearInterval(arc3Int);-->
+<!--//     }-->
+<!--//     flag = 1;-->
+<!--$('.leftLIne').fadeIn(100);-->
+<!--$('.rightBotLIne').fadeIn(100);-->
+<!--$('.rightLine').fadeIn(100);-->
+<!--$('.rightTopLIne').fadeIn(100);-->
+<!--$('.leftBotLIne').fadeIn(100);-->
+<!--$('.dopStyleRotate').addClass('circlesRotateNext');-->
+<!--$('.leftBlockText').fadeIn(1300);-->
+<!--$('.leftBlockText').addClass('leftBlockTextFade');-->
+<!--$('.rightBlockText').fadeIn(1300);-->
+<!--$('.rightBlockText').addClass('rightBlockTextFade');-->
+<!--$('.leftBlockTextBot').fadeIn(1300);-->
+<!--$('.leftBlockTextBot').addClass('leftBlockTextBotFade');-->
+<!--$('.rightBlockTextMiddle').fadeIn(1300);-->
+<!--$('.rightBlockTextMiddle').addClass('rightBlockTextMiddleFade');-->
+<!--$('.rightBlockTextBot').fadeIn(1300);-->
+<!--$('.rightBlockTextBot').addClass('rightBlockTextBotFade');-->
+
+<!--// },10);-->
+
+<!--},1500);-->
+<!--}-->
+<!--});-->
+
+
+<!--//canvas page 2 arc-->
+<!--//     var flag = 0;-->
+<!--//     var c = document.getElementById("myCanvas");-->
+<!--//         arc1 = c.getContext("2d"),-->
+<!--//         int1 = 6,-->
+<!--//         lineWidth = 2,-->
+<!--//         timerSpeed = 70,-->
+<!--//         lineIntX = 0,-->
+<!--//         lineIntY = 0;-->
+<!--//-->
+<!--//     $('#myCanvas').addClass('circlesRotate');-->
+<!--$(window).on("scroll", function() {-->
+<!--if($(window).scrollTop() > 650) {-->
+<!--// $('#myCanvas').css({'display':'block'});-->
+<!--// $('#myCanvas').addClass('circlesRotate');-->
+<!--// var interId = setInterval(function () {-->
+<!--//     int1 -= 0.1;-->
+<!--//     timerSpeed +=0.5;-->
+<!--//     //lineWidth += 0.01;-->
+<!--//     arc1.beginPath();-->
+<!--//     arc1.arc(300, 300, 250, int1, 2*Math.PI);-->
+<!--//     arc1.fillStyle = 'transparent';-->
+<!--//     arc1.fill();-->
+<!--//     //arc1.lineWidth = 4/2;-->
+<!--//     arc1.strokeStyle = '#fff';-->
+<!--//     arc1.stroke();-->
+<!--//-->
+<!--//     if(int1 <= 0) {-->
+<!--//         clearInterval(interId);-->
+<!--//     }-->
+<!--// },120);-->
+
+<!--<div class="leftLIne"></div>-->
+<!--<div class="leftBotLIne"></div>-->
+<!--<div class="rightBotLIne"></div>-->
+<!--<div class="rightTopLIne"></div>-->
+<!--<div class="rightLine"></div>-->
+<!--<canvas id="myCanvas" width="600" height="600" ></canvas>-->
+
+
+<!--.leftLIne {-->
+<!--width: 87px;-->
+<!--height: 1px;-->
+<!--background: #fff;-->
+<!--position: absolute;-->
+<!--top: 25vh;-->
+<!--left: -51vh;-->
+<!--right: 0;-->
+<!--margin: auto;-->
+<!--display: none;-->
+<!--}-->
+
+<!--.leftLIne:before {-->
+<!--content: '';-->
+<!--position: absolute;-->
+<!--width: 20px;-->
+<!--height: 20px;-->
+<!--border: 1px solid #fff;-->
+<!--border-radius: 50%;-->
+<!--left: -22px;-->
+<!--top: -10px;-->
+<!--}-->
+
+<!--.leftBotLIne {-->
+<!--width: 87px;-->
+<!--height: 1px;-->
+<!--border-top: 1px dashed #fff;-->
+<!--position: absolute;-->
+<!--top: 40vh;-->
+<!--left: -41vh;-->
+<!--right: 0;-->
+<!-- -webkit-transform: rotate(-42deg);-->
+<!-- -moz-transform: rotate(-42deg);-->
+<!-- -o-transform: rotate(-42deg);-->
+<!--transform: rotate(-42deg);-->
+<!--margin: auto;-->
+<!--display: none;-->
+<!--}-->
+
+<!--.leftBotLIne:before {-->
+<!--content: '';-->
+<!--position: absolute;-->
+<!--width: 20px;-->
+<!--height: 20px;-->
+<!--border: 1px solid #fff;-->
+<!--border-radius: 50%;-->
+<!--left: -24px;-->
+<!--top: -11px;-->
+<!--}-->
+
+<!--.rightLine {-->
+<!--width: 87px;-->
+<!--height: 1px;-->
+<!--border-top: 1px dashed #fff;-->
+<!--position: absolute;-->
+<!--top: 25vh;-->
+<!--right: -51vh;-->
+<!--left: 0;-->
+<!--margin: auto;-->
+<!--display: none;-->
+<!--}-->
+
+<!--.rightLine:before {-->
+<!--content: '';-->
+<!--position: absolute;-->
+<!--width: 20px;-->
+<!--height: 20px;-->
+<!--border: 1px solid #fff;-->
+<!--border-radius: 50%;-->
+<!--right: -24px;-->
+<!--top: -12px;-->
+<!--}-->
+
+<!--.rightBotLIne {-->
+<!--width: 99px;-->
+<!--height: 1px;-->
+<!--background: #fff;-->
+<!--position: absolute;-->
+<!--top: 40vh;-->
+<!--right: 0;-->
+<!--left: 41vh;-->
+<!--margin: auto;-->
+<!-- -webkit-transform: rotate(40deg);-->
+<!-- -moz-transform: rotate(40deg);-->
+<!-- -o-transform: rotate(40deg);-->
+<!--transform: rotate(40deg);-->
+<!--display: none;-->
+<!--}-->
+
+<!--.rightBotLIne:before {-->
+<!--content: '';-->
+<!--position: absolute;-->
+<!--width: 20px;-->
+<!--height: 20px;-->
+<!--border: 1px solid #fff;-->
+<!--border-radius: 50%;-->
+<!--right: -22px;-->
+<!--top: -10px;-->
+<!--}-->
+
+<!--.rightTopLIne {-->
+<!--width: 97px;-->
+<!--height: 1px;-->
+<!--background: white;-->
+<!--position: absolute;-->
+<!--top: 10vh;-->
+<!--right: 0;-->
+<!--left: 41vh;-->
+<!--margin: auto;-->
+<!-- -webkit-transform: rotate(-41deg);-->
+<!-- -moz-transform: rotate(-41deg);-->
+<!-- -o-transform: rotate(-41deg);-->
+<!--transform: rotate(-41deg);-->
+<!--display: none;-->
+<!--}-->
+
+<!--.rightTopLIne:before {-->
+<!--content: '';-->
+<!--position: absolute;-->
+<!--width: 20px;-->
+<!--height: 20px;-->
+<!--border: 1px solid #fff;-->
+<!--border-radius: 50%;-->
+<!--right: -22px;-->
+<!--top: -10px;-->
+<!--}-->
+
+<!--.leftBlockText {-->
+<!--width: 250px;-->
+<!--text-align: center;-->
+<!--position: absolute;-->
+<!--top: 0;-->
+<!--left: -390%;-->
+<!--right: 0;-->
+<!--margin: auto;-->
+<!--bottom: 0;-->
+<!--height: 145px;-->
+<!--display: none;-->
+<!-- -webkit-transition: all 1.3s;-->
+<!-- -moz-transition: all 1.3s;-->
+<!-- -o-transition: all 1.3s;-->
+<!--transition: all 1.3s;-->
+<!--}-->

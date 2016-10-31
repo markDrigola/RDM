@@ -1,0 +1,12 @@
+@font-face {}
+@font-face {
+  font-family: "lato-r";
+  src: url("../font/lato/Lato-Regular.ttf"); }
+@font-face {
+  font-family: "lato-b";
+  src: url("../font/lato/Lato-Bold.ttf"); }
+@font-face {
+  font-family: "lato-black";
+  src: url("../font/lato/Lato-Black.ttf"); }
+
+/*# sourceMappingURL=font.css.map */

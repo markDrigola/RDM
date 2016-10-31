@@ -1,0 +1,243 @@
+.fp-tableCell
+  vertical-align: top
+h1
+  color: #ffffff
+  font-size: 60px
+  line-height: 75px
+  font-family: 'garamond'
+  font-weight: bold
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 9px
+
+p
+  color: #e0ded6
+  font-size: 16px
+  line-height: 30px
+  text-align: center
+  letter-spacing: 4.5px
+  text-transform: uppercase
+  font-family: "lato-r"
+
+  a
+    font-family: "lato-black"
+    color: #e0ded6
+    text-decoration: none
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span
+  background: #ffffff
+  width: 8px
+  height: 8px
+  margin: -6px 0 0 -4px
+
+#fp-nav ul li,
+.fp-slidesNav ul li
+  margin: 40px 32px
+  transition: 1.4s
+
+.hide-copyright
+  opacity: 0
+  float: left
+  padding-left: 18px
+  font-family: 'lato-r'
+  color: #e0ded6
+  font-size: 14px
+  line-height: 26px
+  text-transform: uppercase
+
+.hide-copyright.show
+  //display: block
+  opacity: 1
+body
+  margin: 0
+
+  .copyright
+    position: fixed
+    left: 52px
+    bottom: 50px
+    color: #e0ded6
+    z-index: 11
+    height: 54px
+
+    .btn-copyright
+      background: url("../images/btn-copyright.png")no-repeat center
+      width: 40px
+      height: 40px
+      display: block
+      float: left
+      margin: 6px 0
+
+
+  .parallax-mirror
+    opacity: 1
+
+  .side-menu
+    position: fixed
+    transition: 0.6s
+    height: 100%
+    background: #070f2e
+    width: 100%
+    margin-left: -100%
+    z-index: 120
+    padding-top: 200px
+
+    .wrapper-list_menu
+      width: 100%
+      max-width: 768px
+      margin: 0 auto
+      text-align: center
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        li
+          height: 90px
+          margin-bottom: 5px
+          span
+            color: #e0ded6
+            font-size: 14px
+            font-family: 'lato-r'
+            text-transform: uppercase
+            line-height: 32px
+            opacity: 0
+            transition: .5s
+          a
+            color: #3f4766
+            font-size: 48px
+            font-family: 'garamond'
+            font-weight: bold
+            text-decoration: none
+            display: block
+            transition: .5s
+        li.active,
+        li:hover
+          span
+            opacity: 1
+          a
+            color: #e0ded6
+
+  .hidden-btn_menu,
+  .burger-menu
+    position: fixed
+    left: 40px
+    top: 42px
+    z-index: 150
+    margin: 0
+    padding: 0
+    background: none
+    border: none
+    outline: none
+    width: 60px
+    height: 60px
+    cursor: pointer
+    .hamburger
+      width: 60px
+      cursor: pointer
+    .hamburger
+      path
+        color: #ffffff
+        stroke-width: .3px
+        stroke: currentcolor
+        transition: .2s
+  .burger-menu.open-menu
+    .p1
+      d: path("M2,8 L8,2")
+    .p2
+      d: path("M5,5 L5,5")
+    .p3
+      d: path("M2,2 L8,8")
+
+  .burger-menu.open-menu
+    z-index: 130
+  .hidden-btn_menu
+    z-index: 140
+  .logo
+    position: fixed
+    left: 0
+    right: 0
+    width: 374px
+    margin: 62px auto
+    transition: 0.6s
+    text-align: center
+    z-index: 140
+    *
+      transition: 0.6s
+      position: absolute
+      top: 0
+      left: 0
+    .orange-logo
+      opacity: 1
+    .white-logo
+      opacity: 0
+
+body.open-menu
+  overflow: hidden
+  .logo
+    .orange-logo
+      opacity: 0
+    .white-logo
+      opacity: 1
+  .side-menu
+    margin-left: 0
+
+  .parallax-mirror
+    transform: translateX(25%)!important
+    opacity: 0.9
+
+.section
+  font-size: 50px
+  color: #ff0000
+  .next-slide
+    position: absolute
+    background: url("../images/hint-scroll.png")no-repeat center center
+    width: 26px
+    height: 41px
+    left: 0
+    right: 0
+    bottom: 56px
+    margin: 0 auto
+  .next-slide:after
+    content: ""
+    animation-name: spin
+    animation-duration: 800ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    width: 2px
+    height: 2px
+    background: #ffffff
+    z-index: 100
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+    top: 20px
+
+@keyframes spin
+  from
+    transform: translateY(-16px)
+  to
+    opacity: 0.3
+
+
+
+.section_01
+  .wrapper-section
+    width: 100%
+    max-width: 1080px
+    margin: 88px auto
+    h1
+      margin-bottom: 68px
+
+
+
+
+body.fp-viewing-secondPage
+  .logo
+    margin-top: 350px
+.section_05
+  height: 1000px!important
+
+
+
+// sect 2

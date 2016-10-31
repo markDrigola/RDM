@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        .artic {
+            width: 250px;
+            height: 250px;
+            position: relative;
+        }
+        
+        .topClip {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip: rect(0px, 44vh, 125px, auto);
+            border: 1px solid;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .topClipArc {
+            opacity: 1;
+            animation: clipTop 2s linear;
+        }
+
+        @keyframes clipTop {
+            0%{
+                clip: rect(0px, 0, 125px, auto);
+            }
+
+            100%{
+                clip: rect(0px, 44vh, 125px, auto);
+            }
+        }
+
+        @keyframes clipBot {
+            0%{
+                transform: rotate(-180deg);
+            }
+
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+
+        .botClip {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            clip: rect(125px, 44vh, auto, auto);
+            border: 1px solid;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .botClipArc {
+            animation: clipBot 2s linear 1.95s;
+        }
+
+        .wrapp2 {
+            width: 250px;
+            height: 250px;
+            position: relative;
+            margin: auto;
+        }
+
+        .arct2 {
+            width: 250px;
+            height: 250px;
+            border: 1px solid;
+            border-radius: 50%;
+            opacity: 0;
+            /*clip: rect(0px, 253px, 125px, 0px);*/
+            position: absolute;
+        }
+        
+        .anim2 {
+            opacity: 1;
+            animation: animate2 2s linear;
+        }
+        
+        @keyframes animate2 {
+            0% {
+                clip: rect(0px, 0px, 125px, 0px);
+            }
+
+            50% {
+                clip: rect(0px, 253px, 125px, 0px);
+                transform: rotate(90deg);
+            }
+            100% {
+                transform: rotate(270deg);
+                clip: rect(0px, 253px, 253px, 0px);
+            }
+        }
+
+        .leftLine {
+            position: absolute;
+            left: -80px;
+            top: 50%;
+            width: 80px;
+            height: 1px;
+            background: black;
+            opacity: 0;
+            border-right: none;
+        }
+
+        .leftLineCircle {
+            position: absolute;
+            left: -102px;
+            top: calc(50% - 11px);
+            width: 20px;
+            height: 20px;
+            border: 1px solid;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .animLeftLine {
+            animation: leftLine 1s linear 2s forwards;
+
+        }
+
+        @keyframes leftLine {
+
+            0% {
+                clip: rect(auto,auto,auto,102px);
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+                clip: rect(auto,auto,auto,0);
+            }
+        }
+
+        .animLeftLineCircle {
+            animation: animLeftLineCircle 1s linear 3s forwards;
+        }
+
+        @keyframes animLeftLineCircle {
+            0% {
+                opacity: 1;
+                clip: rect(auto,auto,auto,20px);
+            }
+            100%{
+                opacity: 1;
+                clip: rect(auto,auto,auto,0);
+            }
+        }
+    </style>
+</head>
+<body>
+<!--<div class="wrapper">-->
+    <!--<div class="artic">-->
+        <!--<div class="topClip"></div>-->
+        <!--<div class="botClip"></div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="wrapp2">
+    <div class="leftLine"></div>
+    <div class="leftLineCircle"></div>
+    <div class="arct2"></div>
+</div>
+<button class="cliper">Cliper</button>
+<button class="cliper2">Cliper2</button>
+<script>
+    'use strict';
+    $('.cliper2').on('click', function () {
+        $('.arct2').addClass('anim2');
+        $('.leftLine').addClass('animLeftLine');
+        $('.leftLineCircle').addClass('animLeftLineCircle');
+    });
+    $('.cliper').on('click', function () {
+        $('.topClip').addClass('topClipArc');
+        $('.botClip').addClass('botClipArc');
+        setTimeout(function () {
+            $('.botClip').css({
+                'opacity': '1'
+            })
+        },2000);
+    });
+
+
+
+    //    var clipPosition = 0;
+//
+//    var circleClip = setInterval(function () {
+//        if(clipPosition < 45) {
+//            clipPosition++;
+//            $('.topClip').css({'clip': 'rect(0px, ' + clipPosition + 'vh, 125px, auto)'});
+//        } else {
+//            clearInterval(circleClip);
+//        }
+//    },10);
+
+
+
+</script>
+</body>
+</html>
