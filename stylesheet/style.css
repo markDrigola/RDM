@@ -50,7 +50,7 @@ p {
   opacity: 1; }
 
 body {
-  /*background: #070f2e;*/
+  background: #070f2e;
   margin: 0; }
   body .copyright {
     position: fixed;
@@ -226,7 +226,9 @@ body.fp-viewing-secondPage .logo {
   /*height: 1000px !important; }*/
 
 /*# sourceMappingURL=style.css.map */
-
+body .logo {
+  z-index: 1;
+}
 .wrapperArc {
   position: relative;
   height: 100%;
@@ -1555,7 +1557,7 @@ body .logo .white-logo {
   top: 0;
   left: 0;
   width: 100%;
-  bottom: 0;
+  bottom: -80px;
   right: 0;
   display: block;
   margin: auto;
@@ -1768,5 +1770,562 @@ body .logo .white-logo {
     height: 110px;
     background-size: contain;
   }
+
+  .leftLineCircle {
+    left: -12.5vh;
+  }
+
+  .leftLineBotCircle {
+    left: -6.5vh;
+  }
+
+  .rightLineCircle {
+    right: -12.8vh;
+  }
+
+  .rightLineBotCircle {
+    right: -7.6vh;
+  }
 }
 
+@media (max-width: 1200px) {
+  .wrapp2 {
+    width: 35vh;
+    height: 35vh;
+  }
+
+  .arct2 {
+    width: 35vh;
+    height: 35vh;
+  }
+
+  .rightLineTop {
+    right: -7.6vh;
+  }
+
+  .rightLineTopCircle {
+    right: -9vh;
+    top: calc(10.5% - 11px);
+  }
+
+  .rightLineBot {
+    right: -6.2vh;
+    top: 87%;
+  }
+
+  .rightLineBotCircle {
+    top: calc(96.8% - 11px);
+  }
+
+  .leftLineBot {
+    top: 91%;
+    transform: rotate(-36deg);
+  }
+
+  .leftLineBotCircle {
+    top: calc(101% - 11px);
+  }
+
+  .dopStyleRotate {
+    height: 35vh;
+    width: 35vh;
+  }
+
+  .leftBlockTextFade {
+    left: -90vh;
+  }
+
+  .leftBlockText {
+    width: 160px;
+  }
+
+  .lBlockImg {
+    background-size: contain;
+  }
+
+  .arcStyle {
+    width: 100%;
+  }
+
+  .leftBlockTextBotFade {
+    left: -80vh;
+  }
+
+  .leftBlockTextBot {
+    width: 160px;
+  }
+
+  .lBlockImgBot {
+    background-size: contain;
+  }
+
+  .rightBlockTextFade {
+    right: -74vh;
+  }
+
+  .lBlockImgTopRight {
+    background-size: contain;
+  }
+
+  .rightBlockText {
+    width: 160px;
+  }
+
+  .rightBlockTextMiddleFade {
+    right: -82vh;
+  }
+
+  .rightBlockTextMiddle {
+    width: 160px;
+  }
+
+  .lBlockImgRightMidle {
+    background-size: contain;
+  }
+
+  .rightBlockTextBotFade {
+    right: -75vh;
+  }
+
+  .rightBlockTextBot {
+    width: 160px;
+  }
+
+  .lBlockImgRightBot {
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .section_01 p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section .next-slide {
+    bottom: 50px;
+  }
+
+  .productionBlock {
+    padding: 30px 0 0 0;
+  }
+
+  .firstProdText,
+  .secondProdText,
+  .thirdProdText{
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .castleFirst,
+  .castleSecond,
+  .castleThird {
+    height: 120px;
+    background-size: contain;
+  }
+
+  .castleWrapp {
+    padding-top: 20px;
+  }
+
+  body .logo .white-logo {
+    bottom: 100px;
+  }
+
+  .fp-viewing-02 .logo {
+    width: 25vh;
+  }
+
+  .titlesCastle {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .textCaste {
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 10px;
+  }
+
+  .nameTitlesText {
+    font-size: 10px;
+  }
+
+  .mailTextContacts {
+    font-size: 10px;
+    color: #e0ded6;
+  }
+
+  .contactsTextWrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1025px) {
+  #titlesFade {
+    font-size: 30px;
+  }
+
+  .productionBlock {
+    width: 750px;
+  }
+
+  .leftProdaction, .middleProdaction, .rightProdaction {
+    width: 30%;
+  }
+
+  .firstAnim, .secondAnim, .thirdAnim {
+    right: -29%;
+    width: 54%;
+  }
+
+  .media768 {
+    display: none;
+  }
+
+  .footerEmail:before {
+    width: 85%;
+  }
+
+  .leftLineCircle {
+    left: -12.8vh;
+  }
+
+  .leftLineBotCircle {
+    left: -6.8vh;
+  }
+
+  .rightLineBotCircle {
+    right: -8vh;
+  }
+
+  .rightLineCircle {
+    right: -13.4vh;
+  }
+
+  .rightLineTopCircle {
+    right: -9.4vh;
+    top: calc(10.5% - 11px);
+  }
+
+  .titlesProd {
+    font-size: 13px;
+  }
+
+  body .logo .white-logo {
+    bottom: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftBlockTextFade {
+    left: -30vh;
+    top: 0;
+    margin-top: 0;
+  }
+
+  .rightBlockTextFade {
+    right: -30vh;
+    top: 0;
+    margin-top: 0;
+  }
+
+  .leftBlockTextBotFade {
+    left: -30vh;
+    top: 200px;
+    margin-top: 0;
+  }
+
+  .rightBlockTextMiddleFade {
+    right: -30vh;
+    margin-top: 0;
+    top: 200px;
+  }
+
+  .rightBlockTextBotFade {
+    top: 250px;
+    right: 0;
+  }
+
+  .dopStyleRotate {
+    display: none;
+  }
+
+  body .logo .white-logo {
+    bottom: auto;
+    top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  body .logo {
+    width: 200px;
+  }
+
+  .productionBlock {
+    width: 100%;
+  }
+
+  h1,
+  #titlesFade {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+
+  .section_01 p {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .section_01 .wrapper-section {
+    margin: 38px auto;
+  }
+
+  body .hidden-btn_menu, body .burger-menu {
+    left: 0px;
+    top: 0px;
+  }
+
+  /*.section.section_02.fp-section.active {*/
+    /*padding-top: 0 !important;*/
+  /*}*/
+
+  .leftBlockTextTitles {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 0;
+  }
+
+  .lBlockImg,
+  .lBlockImgTopRight,
+  .lBlockImgBot {
+    height: 30px;
+  }
+
+  .leftBlockTextTitlesDate {
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 0;
+  }
+
+  .leftBlockTextFade {
+    left: 0;
+  }
+
+  .rightBlockTextFade {
+    right: 0;
+    top: 80px;
+    margin-top: 0;
+  }
+
+  .leftBlockTextBotFade {
+    left: 0;
+    top: 160px;
+    margin-top: 0;
+  }
+
+  .rightBlockTextMiddleFade {
+    right: 0;
+    margin-top: 0;
+    top: 240px;
+  }
+
+  .rightBlockTextMiddle {
+    line-height: 20px;
+  }
+
+  .rightBlockTextBotFade {
+    top: 310px;
+    line-height: 20px;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .productionBlock {
+    display: block;
+  }
+
+  .firstAnim, .secondAnim, .thirdAnim {
+    display: none;
+  }
+
+  .leftProdaction, .middleProdaction, .rightProdaction {
+    width: 85%;
+    margin: auto;
+  }
+
+  .firstProdText, .secondProdText, .thirdProdText {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .titlesProd {
+    font-size: 9px;
+  }
+
+  .leftProdactionImg, .middleProdactionImg, .rightProdactionImg {
+    height: 50px;
+  }
+
+  #fp-nav ul li .fp-tooltip.right {
+    right: -55px;
+  }
+
+  #fp-nav ul li, .fp-slidesNav ul li {
+    margin: 20px 10px;
+    transition: 1.4s;
+  }
+
+  #fp-nav.right {
+    right: 0;
+  }
+
+  .castleWrapp {
+    display: block;
+  }
+
+  .castleFirst, .castleSecond, .castleThird {
+    height: 50px;
+  }
+
+  .allCastlFlex {
+    width: 100%;
+  }
+
+  .titlesCastle {
+    margin-top: 12px;
+  }
+
+  .textCaste {
+    font-size: 8px;
+    letter-spacing: 1px;
+    line-height: 3px;
+  }
+
+  .blockTextAllContacts:first-child {
+     text-align: center;
+  }
+
+  .blockTextAllContacts {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .contactsTextWrapper {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .nameTitlesText {
+    font-size: 8px;
+    margin-top: 12px;
+  }
+
+  .blockTextAllContacts:first-child p {
+     text-align: center;
+  }
+
+  .mailTextContacts {
+    line-height: 0;
+  }
+
+  .blockTextAllContacts:last-child {
+    text-align: center;
+  }
+
+  .blockTextAllContacts:last-child p {
+    text-align: center;
+  }
+
+  .logo2,
+  .footer .logo2 .white-logo{
+    width: 100%;
+  }
+
+  .footerTitles {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .footerTitles span {
+    font-size: 14px;
+  }
+
+  .footerEmail {
+    font-size: 15px;
+    letter-spacing: 1px;
+    position: relative;
+  }
+
+  .footerEmail:before {
+    bottom: -20px;
+    width: 75%;
+  }
+
+  .videoBLockIcon {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 40px auto 20px;
+    position: relative;
+  }
+
+  .videoBLockIcon img {
+    width: 10px;
+  }
+
+  .dropsLink {
+    display: block;
+    margin-left: 15px;
+  }
+
+  .logo2 {
+    width: 200px;
+  }
+
+  body .copyright {
+    left: 15px;
+    bottom: 10px;
+  }
+
+  body .logo {
+    top: 17px;
+  }
+
+  body .logo {
+    top: 17px;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .section_01,
+  .section_02,
+  .section_03,
+  .section_04 {
+    padding-top: 1em !important;
+  }
+
+  .titlesProd {
+    padding-top: 0;
+  }
+
+  body .logo .orange-logo,
+  body .logo .white-logo {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    left: 0;
+    right: 0;
+  }
+}

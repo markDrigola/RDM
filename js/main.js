@@ -7,138 +7,274 @@ $(document).ready(function() {
         //imageSrc: "images/bg-screen.jpg"
     });
 
+    // $(window).resize(function() {
+    //     if ($(window).width() < '768'){
+    //
+    //         $('.full-page_screen').fullpage({
+    //             //Navigation
+    //             menu: '#menu',
+    //             lockAnchors: false,
+    //             anchors:['home', '02', '03', '04', 'footer'],
+    //             navigation: true,
+    //             navigationPosition: 'right',
+    //             navigationTooltips: ['РДМ', 'Бренды и проекты', 'производство', 'контакты', ''],
+    //             showActiveTooltip: true,
+    //             slidesNavigation: true,
+    //             slidesNavPosition: 'left',
+    //
+    //             //Scrolling
+    //             css3: true,
+    //             scrollingSpeed: 1500,
+    //             autoScrolling: true,
+    //             fitToSection: true,
+    //             fitToSectionDelay: 1000,
+    //             scrollBar: true,
+    //             easing: 'easeInOutCubic',
+    //             easingcss3: 'ease',
+    //             loopBottom: false,
+    //             loopTop: false,
+    //             loopHorizontal: false,
+    //             continuousVertical: false,
+    //             continuousHorizontal: false,
+    //             scrollHorizontally: true,
+    //             interlockedSlides: true,
+    //             resetSliders: false,
+    //             fadingEffect: false,
+    //             normalScrollElements: '.section_01, .section_02, .section_03, .section_04, .footer',
+    //             // normalScrollElements: '.footer',
+    //             scrollOverflow: false,
+    //             scrollOverflowOptions: false,
+    //             touchSensitivity: 15,
+    //             normalScrollElementTouchThreshold: 5,
+    //             bigSectionsDestination: true,
+    //
+    //             //Accessibility
+    //             keyboardScrolling: true,
+    //             animateAnchor: true,
+    //             recordHistory: true,
+    //
+    //             //Design
+    //             controlArrows: true,
+    //             verticalCentered: false,  //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //             //sectionsColor : ['#ff0000', '#fff'],
+    //             paddingTop: '3em',
+    //             paddingBottom: '10px',
+    //             fixedElements: '#header, footer',
+    //             responsiveWidth: false,
+    //             responsiveHeight: false,
+    //             responsiveSlides: false,
+    //
+    //             //Custom selectors
+    //             sectionSelector: '.section',
+    //             slideSelector: '.slide',
+    //
+    //             //events
+    //             onLeave: function(index, nextIndex, direction){
+    //                 if(index == 1) {
+    //                     normalScrollElements: '.section_04, .footer';
+    //                     $('.orange-logo').css({'opacity':'0'});
+    //                 }
+    //                 if(index == 2) {
+    //                     $('.white-logo').css({'opacity':'0'});
+    //                 }
+    //
+    //                 if(index == 3) {
+    //                     $('.orange-logo').css({'opacity':'0'});
+    //                 }
+    //
+    //                 if(index == 4) {
+    //                     $('.orange-logo').css({'opacity':'0'});
+    //                 }
+    //
+    //                 if(index == 5) {
+    //                     $('.white-logo').css({'opacity':'0'});
+    //                 }
+    //
+    //                 if(index == 3 && nextIndex == 4){
+    //                     if($('.thirdAnim').hasClass('activesList3')) {
+    //                         return true;
+    //                     }
+    //                     return false;
+    //                 }
+    //
+    //                 if(index == 3 && nextIndex == 2){
+    //                     if(!($('.firstAnim').hasClass('activesList1'))) {
+    //                         return true;
+    //                     }
+    //                     return false;
+    //                 }
+    //             },
+    //
+    //             afterLoad: function(anchorLink, index){
+    //                 if(index == 1) {
+    //                     $('.logo2').css({'display':'none'});
+    //                     $('.white-logo').css({'opacity':'0'});
+    //                     $('.orange-logo').css({'opacity':'1'});
+    //                 }
+    //                 if(index == 2) {
+    //                     $('.logo2').css({'display':'none'});
+    //                     $('.orange-logo').css({'opacity':'0'});
+    //                     $('.white-logo').css({'opacity':'1'});
+    //
+    //                 }
+    //                 if(index == 3) {
+    //                     $('.logo2').css({'display':'none'});
+    //                     $('.white-logo').css({'opacity':'0'});
+    //                     $('.orange-logo').css({'opacity':'1'});
+    //                 }
+    //                 if(index == 4) {
+    //                     $('.logo2').css({'display':'none'});
+    //                     $('.white-logo').css({'opacity':'0'});
+    //                     $('.orange-logo').css({'opacity':'1'});
+    //                 }
+    //                 if(index == 5) {
+    //                     $('.logo2').css({'display':'block'});
+    //                     $('.orange-logo').css({'opacity':'0'});
+    //                     $('.white-logo').css({'opacity':'1'});
+    //                 }
+    //             },
+    //
+    //             afterRender: function(){},
+    //             afterResize: function(){},
+    //             afterResponsive: function(isResponsive){},
+    //             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    //             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    //         });
+        //} else {
+            $('.full-page_screen').fullpage({
+                //Navigation
+                menu: '#menu',
+                lockAnchors: false,
+                anchors:['home', '02', '03', '04', 'footer'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['РДМ', 'Бренды и проекты', 'производство', 'контакты', ''],
+                showActiveTooltip: true,
+                slidesNavigation: true,
+                slidesNavPosition: 'left',
+
+                //Scrolling
+                css3: true,
+                scrollingSpeed: 1500,
+                autoScrolling: true,
+                fitToSection: true,
+                fitToSectionDelay: 1000,
+                scrollBar: true,
+                easing: 'easeInOutCubic',
+                easingcss3: 'ease',
+                loopBottom: false,
+                loopTop: false,
+                loopHorizontal: false,
+                continuousVertical: false,
+                continuousHorizontal: false,
+                scrollHorizontally: true,
+                interlockedSlides: true,
+                resetSliders: false,
+                fadingEffect: false,
+                // normalScrollElements: '.section_04, .footer',
+                // normalScrollElements: '.footer',
+                scrollOverflow: false,
+                scrollOverflowOptions: false,
+                touchSensitivity: 15,
+                normalScrollElementTouchThreshold: 5,
+                bigSectionsDestination: true,
+
+                //Accessibility
+                keyboardScrolling: true,
+                animateAnchor: true,
+                recordHistory: true,
+
+                //Design
+                controlArrows: true,
+                verticalCentered: false,  //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+                //sectionsColor : ['#ff0000', '#fff'],
+                paddingTop: '3em',
+                paddingBottom: '10px',
+                fixedElements: '#header, footer',
+                responsiveWidth: false,
+                responsiveHeight: false,
+                responsiveSlides: false,
+
+                //Custom selectors
+                sectionSelector: '.section',
+                slideSelector: '.slide',
+
+                //events
+                onLeave: function(index, nextIndex, direction){
+                    if(index == 1) {
+                        normalScrollElements: '.section_04, .footer';
+                        $('.orange-logo').css({'opacity':'0'});
+                    }
+                    if(index == 2) {
+                        $('.white-logo').css({'opacity':'0'});
+                    }
+
+                    if(index == 3) {
+                        $('.orange-logo').css({'opacity':'0'});
+                    }
+
+                    if(index == 4) {
+                        $('.orange-logo').css({'opacity':'0'});
+                    }
+
+                    if(index == 5) {
+                        $('.white-logo').css({'opacity':'0'});
+                    }
+
+                    if(index == 3 && nextIndex == 4){
+                        if($('.thirdAnim').hasClass('activesList3')) {
+                            return true;
+                        }
+                        return false;
+                    }
+
+                    if(index == 3 && nextIndex == 2){
+                        if(!($('.firstAnim').hasClass('activesList1'))) {
+                            return true;
+                        }
+                        return false;
+                    }
+                },
+
+                afterLoad: function(anchorLink, index){
+                    if(index == 1) {
+                        $('.logo2').css({'display':'none'});
+                        $('.white-logo').css({'opacity':'0'});
+                        $('.orange-logo').css({'opacity':'1'});
+                    }
+                    if(index == 2) {
+                        $('.logo2').css({'display':'none'});
+                        $('.orange-logo').css({'opacity':'0'});
+                        $('.white-logo').css({'opacity':'1'});
+
+                    }
+                    if(index == 3) {
+                        $('.logo2').css({'display':'none'});
+                        $('.white-logo').css({'opacity':'0'});
+                        $('.orange-logo').css({'opacity':'1'});
+                    }
+                    if(index == 4) {
+                        $('.logo2').css({'display':'none'});
+                        $('.white-logo').css({'opacity':'0'});
+                        $('.orange-logo').css({'opacity':'1'});
+                    }
+                    if(index == 5) {
+                        $('.logo2').css({'display':'block'});
+                        $('.orange-logo').css({'opacity':'0'});
+                        $('.white-logo').css({'opacity':'1'});
+                    }
+                },
+
+                afterRender: function(){},
+                afterResize: function(){},
+                afterResponsive: function(isResponsive){},
+                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+                onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+            });
+    //     }
+    // });
 
 
-
-    $('.full-page_screen').fullpage({
-        //Navigation
-        menu: '#menu',
-        lockAnchors: false,
-        anchors:['home', '02', '03', '04', 'footer'],
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['РДМ', 'Бренды и проекты', 'производство', 'контакты', ''],
-        showActiveTooltip: true,
-        slidesNavigation: true,
-        slidesNavPosition: 'left',
-
-        //Scrolling
-        css3: true,
-        scrollingSpeed: 1500,
-        autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        scrollBar: true,
-        easing: 'easeInOutCubic',
-        easingcss3: 'ease',
-        loopBottom: false,
-        loopTop: false,
-        loopHorizontal: false,
-        continuousVertical: false,
-        continuousHorizontal: false,
-        scrollHorizontally: true,
-        interlockedSlides: true,
-        resetSliders: false,
-        fadingEffect: false,
-        // normalScrollElements: '.section_04, .footer',
-        // normalScrollElements: '.footer',
-        scrollOverflow: false,
-        scrollOverflowOptions: false,
-        touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
-        bigSectionsDestination: true,
-
-        //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-
-        //Design
-        controlArrows: true,
-        verticalCentered: false,  //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-        //sectionsColor : ['#ff0000', '#fff'],
-        paddingTop: '3em',
-        paddingBottom: '10px',
-        fixedElements: '#header, footer',
-        responsiveWidth: false,
-        responsiveHeight: false,
-        responsiveSlides: false,
-
-        //Custom selectors
-        sectionSelector: '.section',
-        slideSelector: '.slide',
-
-        //events
-        onLeave: function(index, nextIndex, direction){
-            if(index == 1) {
-                $('.orange-logo').css({'opacity':'0'});
-            }
-            if(index == 2) {
-                $('.white-logo').css({'opacity':'0'});
-            }
-
-            if(index == 3) {
-                $('.orange-logo').css({'opacity':'0'});
-            }
-
-            if(index == 4) {
-                $('.orange-logo').css({'opacity':'0'});
-            }
-
-            if(index == 5) {
-                $('.white-logo').css({'opacity':'0'});
-            }
-
-            if(index == 3 && nextIndex == 4){
-    if($('.thirdAnim').hasClass('activesList3')) {
-        return true;
-    }
-    return false;
-}
-
-if(index == 3 && nextIndex == 2){
-    if(!($('.firstAnim').hasClass('activesList1'))) {
-        return true;
-    }
-    return false;
-}
-            },
-
-            afterLoad: function(anchorLink, index){
-                if(index == 1) {
-                    $('.logo2').css({'display':'none'});
-                    $('.white-logo').css({'opacity':'0'});
-                    $('.orange-logo').css({'opacity':'1'});
-                }
-                if(index == 2) {
-                    $('.logo2').css({'display':'none'});
-                    $('.orange-logo').css({'opacity':'0'});
-                    $('.white-logo').css({'opacity':'1'});
-
-                }
-                if(index == 3) {
-                    $('.logo2').css({'display':'none'});
-                    $('.white-logo').css({'opacity':'0'});
-                    $('.orange-logo').css({'opacity':'1'});
-                }
-                if(index == 4) {
-                    $('.logo2').css({'display':'none'});
-                    $('.white-logo').css({'opacity':'0'});
-                    $('.orange-logo').css({'opacity':'1'});
-                }
-                if(index == 5) {
-                    $('.logo2').css({'display':'block'});
-                    $('.orange-logo').css({'opacity':'0'});
-                    $('.white-logo').css({'opacity':'1'});
-                }
-            },
-
-        afterRender: function(){},
-        afterResize: function(){},
-        afterResponsive: function(isResponsive){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-    });
 
     var flagLogo = 0;
     $(".burger-menu").on('click', function(){
