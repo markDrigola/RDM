@@ -29,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="215" column="56" selection-start-line="215" selection-start-column="56" selection-end-line="215" selection-end-column="56" />
+            <state relative-caret-position="539">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -39,8 +39,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stylesheet/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="2310" column="14" selection-start-line="2310" selection-start-column="14" selection-end-line="2310" selection-end-column="14" />
+            <state relative-caret-position="2479">
+              <caret line="431" column="1" selection-start-line="431" selection-start-column="1" selection-end-line="431" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -49,8 +49,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="274" column="10" selection-start-line="273" selection-start-column="7" selection-end-line="274" selection-end-column="10" />
+            <state relative-caret-position="128">
+              <caret line="502" column="40" selection-start-line="502" selection-start-column="40" selection-end-line="502" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -113,7 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -122,9 +121,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rdm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rdm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rdm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rdm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,19 +230,20 @@
       <workItem from="1477634922914" duration="26910000" />
       <workItem from="1477663671945" duration="4684000" />
       <workItem from="1477899225911" duration="33617000" />
-      <workItem from="1477984957700" duration="12682000" />
+      <workItem from="1477984957700" duration="12740000" />
+      <workItem from="1478072163988" duration="22087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124992000" />
+    <option name="totallyTimeSpent" value="147137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="81" y="24" width="1599" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2698004" sideWeight="0.49358973" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27366388" sideWeight="0.49358973" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -277,6 +302,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3870">
+          <caret line="215" column="56" selection-start-line="215" selection-start-column="56" selection-end-line="215" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheet/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4932">
+          <caret line="274" column="10" selection-start-line="273" selection-start-column="7" selection-end-line="274" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -529,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platinum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="64" column="28" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/brands.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -568,26 +610,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/platinum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="64" column="28" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="215" column="56" selection-start-line="215" selection-start-column="56" selection-end-line="215" selection-end-column="56" />
+        <state relative-caret-position="539">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="274" column="10" selection-start-line="273" selection-start-column="7" selection-end-line="274" selection-end-column="10" />
+        <state relative-caret-position="128">
+          <caret line="502" column="40" selection-start-line="502" selection-start-column="40" selection-end-line="502" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stylesheet/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="2310" column="14" selection-start-line="2310" selection-start-column="14" selection-end-line="2310" selection-end-column="14" />
+        <state relative-caret-position="2479">
+          <caret line="431" column="1" selection-start-line="431" selection-start-column="1" selection-end-line="431" selection-end-column="1" />
           <folding />
         </state>
       </provider>

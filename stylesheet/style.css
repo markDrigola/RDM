@@ -50,7 +50,7 @@ p {
   opacity: 1; }
 
 body {
-  background: #070f2e;
+  /*background: #070f2e;*/
   margin: 0; }
   body .copyright {
     position: fixed;
@@ -188,7 +188,7 @@ body.open-menu {
     height: 41px;
     left: 0;
     right: 0;
-    bottom: 210px;
+    bottom: 20px;
     margin: 0 auto; }
   .section .next-slide:after {
     content: "";
@@ -425,9 +425,54 @@ body .logo {
 
 .anim2 {
   opacity: 1;
+  -webkit-animation: animate2 1.5s linear;
+  -moz-animation: animate2 1.5s linear;
+  -o-animation: animate2 1.5s linear;
   animation: animate2 1.5s linear;
 }
 
+@-webkit-keyframes animate2 {
+  0% {
+    clip: rect(0px, 0px, 25vh, 0px);
+  }
+
+  50% {
+    clip: rect(0px, 51vh, 25vh, 0px);
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(270deg);
+    clip: rect(0px, 51vh, 51vh, 0px);
+  }
+}
+@-moz-keyframes animate2 {
+  0% {
+    clip: rect(0px, 0px, 25vh, 0px);
+  }
+
+  50% {
+    clip: rect(0px, 51vh, 25vh, 0px);
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(270deg);
+    clip: rect(0px, 51vh, 51vh, 0px);
+  }
+}
+@-o-keyframes animate2 {
+  0% {
+    clip: rect(0px, 0px, 25vh, 0px);
+  }
+
+  50% {
+    clip: rect(0px, 51vh, 25vh, 0px);
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(270deg);
+    clip: rect(0px, 51vh, 51vh, 0px);
+  }
+}
 @keyframes animate2 {
   0% {
     clip: rect(0px, 0px, 25vh, 0px);
@@ -448,9 +493,57 @@ body .logo {
 
 .anim22 {
   opacity: 1;
+  -webkit-animation: animate22 0.6s linear forwards;
+  -moz-animation: animate22 0.6s linear forwards;
+  -o-animation: animate22 0.6s linear forwards;
   animation: animate22 0.6s linear forwards;
 }
 
+@-webkit-keyframes animate22 {
+  0% {
+    clip: rect(0px, 51vh, 51vh, 0px);
+    transform: rotate(270deg);
+  }
+
+  50% {
+    clip: rect(0px, 51vh, 25vh, 0px);
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    clip: rect(0px, 0px, 25vh, 0px);
+  }
+}
+@-moz-keyframes animate22 {
+  0% {
+    clip: rect(0px, 51vh, 51vh, 0px);
+    transform: rotate(270deg);
+  }
+
+  50% {
+    clip: rect(0px, 51vh, 25vh, 0px);
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    clip: rect(0px, 0px, 25vh, 0px);
+  }
+}
+@-o-keyframes animate22 {
+  0% {
+    clip: rect(0px, 51vh, 51vh, 0px);
+    transform: rotate(270deg);
+  }
+
+  50% {
+    clip: rect(0px, 51vh, 25vh, 0px);
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    clip: rect(0px, 0px, 25vh, 0px);
+  }
+}
 @keyframes animate22 {
   0% {
     clip: rect(0px, 51vh, 51vh, 0px);
@@ -470,9 +563,48 @@ body .logo {
 
 /*LEFT LINE*/
 .animLeftLine {
+  -webkit-animation: leftLine 1s linear 1.5s forwards;
+  -moz-animation: leftLine 1s linear 1.5s forwards;
+  -o-animation: leftLine 1s linear 1.5s forwards;
   animation: leftLine 1s linear 1.5s forwards;
 }
 
+@-webkit-keyframes leftLine {
+  0% {
+    clip: rect(auto,auto,auto,10vh);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
+@-moz-keyframes leftLine {
+  0% {
+    clip: rect(auto,auto,auto,10vh);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
+@-o-keyframes leftLine {
+  0% {
+    clip: rect(auto,auto,auto,10vh);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
 @keyframes leftLine {
   0% {
     clip: rect(auto,auto,auto,10vh);
@@ -489,9 +621,42 @@ body .logo {
 
 /*BACK LEFT LINE*/
 .animLeftLine2 {
+  -webkit-animation: leftLine2 0.6s linear forwards;
+  -moz-animation: leftLine2 0.6s linear forwards;
+  -o-animation: leftLine2 0.6s linear forwards;
   animation: leftLine2 0.6s linear forwards;
 }
 
+@-webkit-keyframes leftLine2 {
+  0% {
+    clip: rect(auto,auto,auto,0);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,auto,auto,10vh);
+  }
+}
+@-moz-keyframes leftLine2 {
+  0% {
+    clip: rect(auto,auto,auto,0);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,auto,auto,10vh);
+  }
+}
+@-o-keyframes leftLine2 {
+  0% {
+    clip: rect(auto,auto,auto,0);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,auto,auto,10vh);
+  }
+}
 @keyframes leftLine2 {
   0% {
     clip: rect(auto,auto,auto,0);
@@ -506,9 +671,47 @@ body .logo {
 
 /*RIGHT LINE ANIME*/
 .animRightLine {
+  -webkit-animation: rightLine 1s linear 1.5s forwards;
+  -moz-animation: rightLine 1s linear 1.5s forwards;
+  -o-animation: rightLine 1s linear 1.5s forwards;
   animation: rightLine 1s linear 1.5s forwards;
 }
-
+@-webkit-keyframes rightLine {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
+@-moz-keyframes rightLine {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
+@-o-keyframes rightLine {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
 @keyframes rightLine {
   0% {
     clip: rect(auto,0,auto,auto);
@@ -525,9 +728,42 @@ body .logo {
 
 /*RIGHT LINE ANIME BACK*/
 .animRightLine2 {
+  -webkit-animation: rightLine2 0.6s linear forwards;
+  -moz-animation: rightLine2 0.6s linear forwards;
+  -o-animation: rightLine2 0.6s linear forwards;
   animation: rightLine2 0.6s linear forwards;
 }
 
+@-webkit-keyframes rightLine2 {
+  0% {
+    clip: rect(auto,10vh,auto,auto);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0,auto,auto);
+  }
+}
+@-moz-keyframes rightLine2 {
+  0% {
+    clip: rect(auto,10vh,auto,auto);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0,auto,auto);
+  }
+}
+@-o-keyframes rightLine2 {
+  0% {
+    clip: rect(auto,10vh,auto,auto);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0,auto,auto);
+  }
+}
 @keyframes rightLine2 {
   0% {
     clip: rect(auto,10vh,auto,auto);
@@ -543,9 +779,48 @@ body .logo {
 
 /*RIGHT LINE BOT ANIME*/
 .animRightLineBot {
+  -webkit-animation: rightLineBot 1s linear 1.5s forwards;
+  -moz-animation: rightLineBot 1s linear 1.5s forwards;
+  -o-animation: rightLineBot 1s linear 1.5s forwards;
   animation: rightLineBot 1s linear 1.5s forwards;
 }
 
+@-webkit-keyframes rightLineBot {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
+@-moz-keyframes rightLineBot {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
+@-o-keyframes rightLineBot {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
 @keyframes rightLineBot {
   0% {
     clip: rect(auto,0,auto,auto);
@@ -562,9 +837,45 @@ body .logo {
 
 /*RIGHT LINE BOT ANIME BACK*/
 .animRightLineBot2 {
+  -webkit-animation: rightLineBot2 0.6s linear forwards;
+  -moz-animation: rightLineBot2 0.6s linear forwards;
+  -o-animation: rightLineBot2 0.6s linear forwards;
   animation: rightLineBot2 0.6s linear forwards;
 }
 
+@-webkit-keyframes rightLineBot2 {
+  0% {
+    clip: rect(auto,10vh,auto,auto);
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0,auto,auto);
+
+  }
+}
+@-moz-keyframes rightLineBot2 {
+  0% {
+    clip: rect(auto,10vh,auto,auto);
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0,auto,auto);
+
+  }
+}
+@-o-keyframes rightLineBot2 {
+  0% {
+    clip: rect(auto,10vh,auto,auto);
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0,auto,auto);
+
+  }
+}
 @keyframes rightLineBot2 {
   0% {
     clip: rect(auto,10vh,auto,auto);
@@ -580,9 +891,42 @@ body .logo {
 
 /*LEFT CIRCLE ANIME*/
 .animLeftLineCircle {
+  -webkit-animation: animLeftLineCircle 1s linear 2.5s forwards;
+  -moz-animation: animLeftLineCircle 1s linear 2.5s forwards;
+  -o-animation: animLeftLineCircle 1s linear 2.5s forwards;
   animation: animLeftLineCircle 1s linear 2.5s forwards;
 }
 
+@-webkit-keyframes animLeftLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,20px);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
+@-moz-keyframes animLeftLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,20px);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
+@-o-keyframes animLeftLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,20px);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
 @keyframes animLeftLineCircle {
   0% {
     opacity: 1;
@@ -598,9 +942,48 @@ body .logo {
 
 /*LEFT CIRCLE ANIME BACK*/
 .animLeftLineCircle2 {
+  -webkit-animation: animLeftLineCircle2 0.3s linear forwards;
+  -moz-animation: animLeftLineCircle2 0.3s linear forwards;
+  -o-animation: animLeftLineCircle2 0.3s linear forwards;
   animation: animLeftLineCircle2 0.3s linear forwards;
 }
 
+@-webkit-keyframes animLeftLineCircle2 {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(180deg);
+    clip: rect(auto,auto,auto,20px);
+
+  }
+}
+@-moz-keyframes animLeftLineCircle2 {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(180deg);
+    clip: rect(auto,auto,auto,20px);
+
+  }
+}
+@-o-keyframes animLeftLineCircle2 {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(180deg);
+    clip: rect(auto,auto,auto,20px);
+
+  }
+}
 @keyframes animLeftLineCircle2 {
   0% {
     opacity: 1;
@@ -617,9 +1000,42 @@ body .logo {
 
 /*RIGH CIRCLE ANIME*/
 .animRightLineCircle {
+  -webkit-animation: animRightLineCircle 1s linear 2.5s forwards;
+  -moz-animation: animRightLineCircle 1s linear 2.5s forwards;
+  -o-animation: animRightLineCircle 1s linear 2.5s forwards;
   animation: animRightLineCircle 1s linear 2.5s forwards;
 }
 
+@-webkit-keyframes animRightLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
+@-moz-keyframes animRightLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
+@-o-keyframes animRightLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
 @keyframes animRightLineCircle {
   0% {
     opacity: 1;
@@ -634,9 +1050,42 @@ body .logo {
 
 /*RIGH CIRCLE ANIME BACK*/
 .animRightLineCircle2 {
+  -webkit-animation: animRightLineCircle2 0.3s linear forwards;
+  -moz-animation: animRightLineCircle2 0.3s linear forwards;
+  -o-animation: animRightLineCircle2 0.3s linear forwards;
   animation: animRightLineCircle2 0.3s linear forwards;
 }
 
+@-webkit-keyframes animRightLineCircle2 {
+  0% {
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0px,auto,auto);
+  }
+}
+@-moz-keyframes animRightLineCircle2 {
+  0% {
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0px,auto,auto);
+  }
+}
+@-o-keyframes animRightLineCircle2 {
+  0% {
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0px,auto,auto);
+  }
+}
 @keyframes animRightLineCircle2 {
   0% {
     opacity: 1;
@@ -651,9 +1100,42 @@ body .logo {
 
 /*RIGH BOT CIRCLE ANIME*/
 .animRightLineBotCircle {
+  -webkit-animation: animRightLineBotCircle 1s linear 2.5s forwards;
+  -moz-animation: animRightLineBotCircle 1s linear 2.5s forwards;
+  -o-animation: animRightLineBotCircle 1s linear 2.5s forwards;
   animation: animRightLineBotCircle 1s linear 2.5s forwards;
 }
 
+@-webkit-keyframes animRightLineBotCircle {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
+@-moz-keyframes animRightLineBotCircle {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
+@-o-keyframes animRightLineBotCircle {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
 @keyframes animRightLineBotCircle {
   0% {
     opacity: 0.5;
@@ -668,7 +1150,43 @@ body .logo {
 
 /*RIGH BOT CIRCLE ANIME BACK*/
 .animRightLineBotCircle2 {
+  -webkit-animation: animRightLineBotCircle2 0.3s linear forwards;
+  -moz-animation: animRightLineBotCircle2 0.3s linear forwards;
+  -o-animation: animRightLineBotCircle2 0.3s linear forwards;
   animation: animRightLineBotCircle2 0.3s linear forwards;
+}
+
+@-webkit-keyframes animRightLineBotCircle2 {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0px,auto,auto);
+  }
+}
+
+@-moz-keyframes animRightLineBotCircle2 {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0px,auto,auto);
+  }
+}
+
+@-o-keyframes animRightLineBotCircle2 {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+  100%{
+    opacity: 0;
+    clip: rect(auto,0px,auto,auto);
+  }
 }
 
 @keyframes animRightLineBotCircle2 {
@@ -692,9 +1210,48 @@ body .logo {
 
 
 .animLeftLine {
+  -webkit-animation: leftLine 1s linear 1.5s forwards;
+  -moz-animation: leftLine 1s linear 1.5s forwards;
+  -o-animation: leftLine 1s linear 1.5s forwards;
   animation: leftLine 1s linear 1.5s forwards;
 }
 
+@-webkit-keyframes leftLine {
+  0% {
+    clip: rect(auto,auto,auto,10vh);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
+@-moz-keyframes leftLine {
+  0% {
+    clip: rect(auto,auto,auto,10vh);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
+@-o-keyframes leftLine {
+  0% {
+    clip: rect(auto,auto,auto,10vh);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
 @keyframes leftLine {
   0% {
     clip: rect(auto,auto,auto,10vh);
@@ -709,9 +1266,48 @@ body .logo {
 }
 
 .animRightLine {
+  -webkit-animation: rightLine 1s linear 1.5s forwards;
+  -moz-animation: rightLine 1s linear 1.5s forwards;
+  -o-animation: rightLine 1s linear 1.5s forwards;
   animation: rightLine 1s linear 1.5s forwards;
 }
 
+@-webkit-keyframes rightLine {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
+@-moz-keyframes rightLine {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
+@-o-keyframes rightLine {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
 @keyframes rightLine {
   0% {
     clip: rect(auto,0,auto,auto);
@@ -726,9 +1322,48 @@ body .logo {
 }
 
 .animRightLineBot {
+  -webkit-animation: rightLineBot 1s linear 1.5s forwards;
+  -moz-animation: rightLineBot 1s linear 1.5s forwards;
+  -o-animation: rightLineBot 1s linear 1.5s forwards;
   animation: rightLineBot 1s linear 1.5s forwards;
 }
 
+@-webkit-keyframes rightLineBot {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
+@-moz-keyframes rightLineBot {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
+@-o-keyframes rightLineBot {
+  0% {
+    clip: rect(auto,0,auto,auto);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,10vh,auto,auto);
+  }
+}
 @keyframes rightLineBot {
   0% {
     clip: rect(auto,0,auto,auto);
@@ -743,9 +1378,42 @@ body .logo {
 }
 
 .animLeftLineCircle {
+  -webkit-animation: animLeftLineCircle 1s linear 2.5s forwards;
+  -moz-animation: animLeftLineCircle 1s linear 2.5s forwards;
+  -o-animation: animLeftLineCircle 1s linear 2.5s forwards;
   animation: animLeftLineCircle 1s linear 2.5s forwards;
 }
 
+@-webkit-keyframes animLeftLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,20px);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
+@-moz-keyframes animLeftLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,20px);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
+@-o-keyframes animLeftLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,auto,auto,20px);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,auto,auto,0);
+  }
+}
 @keyframes animLeftLineCircle {
   0% {
     opacity: 1;
@@ -758,9 +1426,42 @@ body .logo {
 }
 
 .animRightLineCircle {
+  -webkit-animation: animRightLineCircle 1s linear 2.5s forwards;
+  -moz-animation: animRightLineCircle 1s linear 2.5s forwards;
+  -o-animation: animRightLineCircle 1s linear 2.5s forwards;
   animation: animRightLineCircle 1s linear 2.5s forwards;
 }
 
+@-webkit-keyframes animRightLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
+@-moz-keyframes animRightLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
+@-o-keyframes animRightLineCircle {
+  0% {
+    opacity: 1;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 1;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
 @keyframes animRightLineCircle {
   0% {
     opacity: 1;
@@ -773,9 +1474,42 @@ body .logo {
 }
 
 .animRightLineBotCircle {
+  -webkit-animation: animRightLineBotCircle 1s linear 2.5s forwards;
+  -moz-animation: animRightLineBotCircle 1s linear 2.5s forwards;
+  -o-animation: animRightLineBotCircle 1s linear 2.5s forwards;
   animation: animRightLineBotCircle 1s linear 2.5s forwards;
 }
 
+@-webkit-keyframes animRightLineBotCircle {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
+@-mox-keyframes animRightLineBotCircle {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
+@-o-keyframes animRightLineBotCircle {
+  0% {
+    opacity: 0.5;
+    clip: rect(auto,0px,auto,auto);
+  }
+  100%{
+    opacity: 0.5;
+    clip: rect(auto,25px,auto,auto);
+  }
+}
 @keyframes animRightLineBotCircle {
   0% {
     opacity: 0.5;
@@ -787,12 +1521,37 @@ body .logo {
   }
 }
 
+body .logo {
+  top: 63px;
+  height: 100px;
+  margin: 0 auto;
+}
 
+/*.logo.centerLogo {*/
+  /*height: auto;*/
+/*}*/
 
+.logoInCircle {
+  width: 32vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 55px;
+  transition: all 1s;
+  opacity: 0;
+}
 
+.logoInCircle img {
+  width: 100%;
+}
 
-
-
+.centerLogoCircle {
+  /*display: block;*/
+  opacity: 1;
+}
 
 
 
@@ -996,6 +1755,11 @@ body .logo {
   /*height: 110px;*/
 
 /*}*/
+
+.dropsMenu {
+  background: #070f2e;
+  width: 110px;
+}
 
 .logoTwoMonitor {
   top: 53vh !important;
@@ -1300,7 +2064,16 @@ body .logo {
 
 .productionBlock {
   padding: 100px 0 0 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1920px;
   margin-left: auto;
@@ -1345,36 +2118,73 @@ body .logo {
   line-height: 0;
   margin: 0 1.65% 0 1.65%;
   padding: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
   transition: all .3s;
   float: left;
 }
 
+.ligt.one {
+  border-radius: 50%;
+}
+
 .one {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: dotedOne 0.4s linear forwards;
+  -moz-animation: dotedOne 0.4s linear forwards;
+  -o-animation: dotedOne 0.4s linear forwards;
   animation: dotedOne 0.4s linear forwards;
 }
 
 .two {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: dotedOne 0.4s linear forwards;
+  -moz-animation: dotedOne 0.4s linear forwards;
+  -o-animation: dotedOne 0.4s linear forwards;
   animation: dotedOne 0.4s linear forwards;
 }
 
 .tree {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: dotedOne 0.4s linear forwards;
+  -moz-animation: dotedOne 0.4s linear forwards;
+  -o-animation: dotedOne 0.4s linear forwards;
   animation: dotedOne 0.4s linear forwards;
 }
 
 .one2 {
+  -webkit-animation: dotedOne2 0.4s linear forwards;
+  -moz-animation: dotedOne2 0.4s linear forwards;
+  -o-animation: dotedOne2 0.4s linear forwards;
   animation: dotedOne2 0.4s linear forwards;
 }
 
 .two2 {
+  -webkit-animation: dotedOne2 0.4s linear forwards;
+  -moz-animation: dotedOne2 0.4s linear forwards;
+  -o-animation: dotedOne2 0.4s linear forwards;
   animation: dotedOne2 0.4s linear forwards;
 }
 
 .tree2 {
+  -webkit-animation: dotedOne2 0.4s linear forwards;
+  -moz-animation: dotedOne2 0.4s linear forwards;
+  -o-animation: dotedOne2 0.4s linear forwards;
   animation: dotedOne2 0.4s linear forwards;
 }
 
-@keyframes dotedOne {
+@-webkit-keyframes dotedOne {
   0%{
     background: #c3c3c3;
   }
@@ -1385,8 +2195,146 @@ body .logo {
   100%{
     background: #fff;
     transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
   }
 }
+
+@-moz-keyframes dotedOne {
+  0%{
+    background: #c3c3c3;
+  }
+  50%{
+    background: #fff;
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7);
+  }
+  100%{
+    background: #fff;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
+@-o-keyframes dotedOne {
+  0%{
+    background: #c3c3c3;
+  }
+  50%{
+    background: #fff;
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7);
+  }
+  100%{
+    background: #fff;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
+@keyframes dotedOne {
+  0%{
+    background: #c3c3c3;
+  }
+  50%{
+    background: #fff;
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7);
+  }
+  100%{
+    background: #fff;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
+
+@-webkit-keyframes dotedOne2 {
+  0%{
+    background: #fff;
+    transform: scale(1.2);
+  }
+  50%{
+    background: #fff;
+    transform: scale(1.7);
+  }
+  100%{
+    background: #c3c3c3;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
+
+@-moz-keyframes dotedOne2 {
+  0%{
+    background: #fff;
+    transform: scale(1.2);
+  }
+  50%{
+    background: #fff;
+    transform: scale(1.7);
+  }
+  100%{
+    background: #c3c3c3;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
+
+@-o-keyframes dotedOne2 {
+  0%{
+    background: #fff;
+    transform: scale(1.2);
+  }
+  50%{
+    background: #fff;
+    transform: scale(1.7);
+  }
+  100%{
+    background: #c3c3c3;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
 
 @keyframes dotedOne2 {
   0%{
@@ -1399,6 +2347,10 @@ body .logo {
   }
   100%{
     background: #c3c3c3;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
   }
 }
 
@@ -1421,6 +2373,10 @@ body .logo {
 /*contacts*/
 
 .castleWrapp {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   padding-top: 50px;
 }
@@ -1564,7 +2520,28 @@ body .logo .white-logo {
 }
 
 .animWhite {
+  -webkit-animation: anLogoWhite 1s linear forwards;
+  -moz-animation: anLogoWhite 1s linear forwards;
+  -o-animation: anLogoWhite 1s linear forwards;
   animation: anLogoWhite 1s linear forwards;
+}
+
+@-webkit-keyframes anLogoWhite {
+  100%{
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes anLogoWhite {
+  100%{
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes anLogoWhite {
+  100%{
+    transform: scale(1);
+  }
 }
 
 @keyframes anLogoWhite {
@@ -1747,6 +2724,156 @@ body .logo .white-logo {
   }
 }
 
+@media (max-width: 1380px) {
+  .leftBlockTextFade {
+    left: -115vh;
+  }
+
+  .leftBlockTextBotFade {
+    left: -100vh;
+  }
+
+  .rightBlockTextBotFade {
+    right: -95vh;
+  }
+
+  .rightBlockTextMiddleFade {
+    right: -106vh;
+  }
+
+  .rightBlockTextFade {
+    right: -90vh;
+  }
+
+  .rightLineTopCircle {
+    right: -8vh;
+  }
+
+  .rightLineCircle {
+    right: -13.4vh;
+  }
+
+  .rightLineBotCircle {
+    right: -8.4vh;
+  }
+
+  .leftLineBotCircle {
+    left: -6.9vh;
+  }
+
+  .leftLineCircle {
+    left: -12.8vh;
+  }
+
+  .productionBlock {
+    padding: 0;
+  }
+
+  .firstProdText,
+  .secondProdText,
+  .thirdProdText {
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+
+  .castleWrapp {
+    padding-top: 0;
+  }
+
+  body .copyright {
+    bottom: 20px;
+  }
+
+  .nameTitlesText {
+    margin-top: 10px;
+  }
+
+  .titlesCastle {
+    margin-top: 20px;
+  }
+
+  .footerTitles {
+    font-size: 50px;
+    line-height: 55px;
+  }
+}
+
+@media (max-width: 1366px) and (max-height: 1024px) {
+  .section_02 {
+    padding-top: 0 !important;
+  }
+
+  .arct2,
+  .dopStyleRotate,
+  .wrapp2 {
+    width: 40vh;
+    height: 40vh;
+  }
+
+  .leftBlockTextFade {
+    left: -95vh;
+  }
+
+  .leftLineCircle {
+    left: -12vh;
+  }
+
+  .leftBlockTextBotFade {
+    bottom: 20vh;
+    left: -87vh;
+  }
+
+  .leftLineBot {
+    left: -5vh;
+    top: 87%;
+  }
+
+  .leftLineBotCircle {
+    top: calc(96% - 11px);
+    left: -6vh;
+  }
+
+  .rightBlockTextFade {
+    right: -80vh;
+    top: 18vh;
+  }
+
+  .rightLineTopCircle {
+    right: -8.2vh;
+    top: calc(11.4% - 11px);
+  }
+
+  .rightLineTop {
+    right: -7.2vh;
+  }
+
+  .rightBlockTextMiddleFade {
+    right: -93vh;
+  }
+
+  .rightLineCircle {
+    right: -12.4vh;
+  }
+
+  .rightLineBot {
+    right: -7.2vh;
+  }
+
+  .rightLineBotCircle {
+    top: calc(88.8% - 11px);
+    right: -8.4vh;
+  }
+
+  .rightBlockTextBotFade {
+   bottom: 18vh;
+    right: -80vh;
+  }
+
+}
+
+
+
 @media (max-width: 1300px) {
   .productionBlock {
     width: 991px;
@@ -1785,6 +2912,35 @@ body .logo .white-logo {
 
   .rightLineBotCircle {
     right: -7.6vh;
+  }
+
+  .textCaste {
+    font-size: 10px;
+  }
+
+  .titlesCastle {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  .castleFirst,
+  .castleSecond,
+  .castleThird {
+    height: 110px;
+    background-size: contain;
+  }
+
+  .nameTitlesText {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+
+  .castleWrapp {
+    padding-top: 0;
+  }
+
+  .dropsLink {
+    height: 150px;
   }
 }
 
@@ -1837,6 +2993,10 @@ body .logo .white-logo {
 
   .leftBlockText {
     width: 160px;
+  }
+
+  .section_02 {
+    padding: 0 !important;
   }
 
   .lBlockImg {
@@ -1945,8 +3105,8 @@ body .logo .white-logo {
   }
 
   .textCaste {
-    font-size: 10px;
-    letter-spacing: 1px;
+    font-size: 9px;
+    letter-spacing: 0px;
     line-height: 10px;
   }
 
@@ -1987,7 +3147,7 @@ body .logo .white-logo {
   }
 
   .footerEmail:before {
-    width: 85%;
+    width: 65%;
   }
 
   .leftLineCircle {
@@ -2015,15 +3175,161 @@ body .logo .white-logo {
     font-size: 13px;
   }
 
+  .contactsTextWrapper {
+    width: 92%;
+  }
+
+  .nameTitlesText {
+    font-size: 9px;
+  }
+
+  .mailTextContacts {
+    font-size: 9px;
+    color: #e0ded6;
+  }
+
   body .logo .white-logo {
     bottom: -80px;
+  }
+
+  .logo2 {
+    margin: 0 auto;
+    height: 100px;
+    width: 250px;
+  }
+
+  .logo2 .white-logo {
+    width: 100%;
+  }
+
+  .footerTitles {
+    line-height: 55px;
+    font-size: 30px;
+  }
+
+  .footerTitles span {
+    font-size: 20px;
+  }
+
+  body .logo {
+    width: 250px;
+  }
+
+  .section_03 {
+    padding-top: 2em !important;
+  }
+
+  .dropsLink {
+    height: 30px;
+  }
+
+  .videoBLockIcon {
+    width: 60px;
+    height: 60px;
+    margin: 50px auto 20px;
+  }
+
+  .footerEmail {
+    font-size: 21px;
+    letter-spacing: 11px;
+  }
+
+  .castleFirst, .castleSecond, .castleThird {
+    height: 90px;
+  }
+
+  body .side-menu {
+    padding-top: 40px;
+  }
+
+  body .side-menu .wrapper-list_menu ul li a {
+    font-size: 34px;
+  }
+
+  body .copyright {
+    bottom: 10px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 960px) and (max-height: 600px){
+  body .side-menu .wrapper-list_menu ul li {
+    height: 70px;
+  }
+
+  h1,
+  #titlesFade {
+    line-height: 45px;
+    font-size: 30px;
+    margin-bottom: 28px;
+    margin-top: 0;
+  }
+
+  .section_01 .wrapper-section {
+    margin: 0 auto;
+  }
+
+  .section_01 p {
+    font-size: 11px;
+  }
+
+  .leftBlockTextFade {
+    left: -106vh;
+  }
+
+  .leftBlockTextBotFade {
+    left: -93vh;
+  }
+
+  .lBlockImgTopRight {
+    background-size: contain;
+    height: 30px;
+  }
+
+  .rightBlockTextMiddleFade .leftBlockTextTitles,
+  .rightBlockTextBotFade .leftBlockTextTitles {
+    margin: 0;
+  }
+
+  .rightBlockTextBotFade {
+    bottom: 5vh;
+  }
+
+  .rightBlockTextMiddleFade {
+    right: -100vh;
+    top: 5vh;
+  }
+
+  .leftLineCircle {
+    left: -14.6vh;
+  }
+
+  .leftLineBotCircle {
+    left: -8.4vh;
+    top: calc(103% - 11px);
+  }
+
+  .rightLineTopCircle {
+    right: -10.8vh;
+    top: calc(9.5% - 11px);
+  }
+
+  .rightLineCircle {
+    right: -15.2vh;
+  }
+
+  .rightLineBotCircle {
+    right: -10vh;
   }
 }
 
 @media (max-width: 768px) {
   .leftBlockTextFade {
     left: -30vh;
-    top: 0;
+    top: 10px;
     margin-top: 0;
   }
 
@@ -2060,6 +3366,12 @@ body .logo .white-logo {
   }
 }
 
+@media (max-width: 768px) and (max-height: 1024px) {
+  .section_02 {
+    padding-top: 3em !important;
+  }
+}
+
 @media (max-width: 767px) {
   body .logo {
     width: 200px;
@@ -2071,9 +3383,9 @@ body .logo .white-logo {
 
   h1,
   #titlesFade {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 10px;
   }
 
@@ -2120,7 +3432,7 @@ body .logo .white-logo {
 
   .rightBlockTextFade {
     right: 0;
-    top: 80px;
+    top: 85px;
     margin-top: 0;
   }
 
@@ -2310,7 +3622,8 @@ body .logo .white-logo {
   .section_01,
   .section_02,
   .section_03,
-  .section_04 {
+  .section_04,
+  .footer {
     padding-top: 1em !important;
   }
 
@@ -2327,5 +3640,216 @@ body .logo .white-logo {
     float: none;
     left: 0;
     right: 0;
+  }
+
+  .productionBlock {
+    padding: 10px 0 0 0;
+  }
+
+  .firstProdText, .secondProdText, .thirdProdText {
+    display: block;
+  }
+
+  .logoInCircle {
+    display: none;
+  }
+
+  body .logo .white-logo {
+    width: 100%;
+  }
+
+  body .hidden-btn_menu .hamburger, body .burger-menu .hamburger {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  body .side-menu {
+    padding-top: 70px;
+  }
+
+  body .side-menu .wrapper-list_menu ul li {
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+  body .side-menu .wrapper-list_menu ul li a {
+    font-size: 20px;
+  }
+
+  body .side-menu .wrapper-list_menu ul li span {
+    font-size: 10px;
+    line-height: 30px;
+  }
+
+  .footerLogo .logo2 {
+    top: 17px;
+    height: 50px;
+    margin: 0px auto;
+  }
+
+  .footerLogo .logo2 .white-logo {
+    width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .dropsLink {
+    height: 100px;
+    line-height: 24px;
+  }
+
+  body .copyright .btn-copyright {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+  }
+
+  .rightBlockTextMiddleFade .leftBlockTextTitles, .rightBlockTextBotFade .leftBlockTextTitles {
+    margin: 12px auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .castleFirst, .castleSecond, .castleThird {
+    height: 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .firstProdText, .secondProdText, .thirdProdText {
+    font-size: 8px;
+    line-height: 12px;
+    margin-top: 2px;
+  }
+
+  .titlesProd {
+    font-size: 8px;
+    margin-bottom: 0;
+  }
+
+  .leftProdactionImg, .middleProdactionImg, .rightProdactionImg {
+    height: 40px;
+  }
+
+  .castleFirst, .castleSecond, .castleThird {
+    height: 0;
+  }
+}
+
+@media (max-height: 768px) {
+  .section .next-slide {
+    bottom: 20px;
+  }
+}
+
+@media (max-height: 650px) and (min-width: 1024px){
+  .leftBlockTextFade {
+    left: -105vh;
+  }
+
+  .leftBlockTextBotFade {
+    left: -90vh;
+  }
+
+  .leftBlockTextTitles {
+    margin: 0;
+  }
+
+  .rightBlockTextFade {
+    right: -84vh;
+  }
+
+  .rightBlockTextMiddleFade {
+    right: -110vh;
+  }
+
+  .rightBlockTextBotFade {
+    right: -95vh;
+  }
+
+  .rightBlockTextBot {
+    bottom: 7vh;
+  }
+
+  .rightBlockTextMiddle {
+    top: 5vh;
+  }
+
+  .leftBlockTextBot {
+    bottom: 7vh;
+  }
+
+  .leftBlockText {
+    top: 9vh;
+  }
+
+  .leftLineCircle {
+    left: -14vh;
+  }
+
+  .rightLineTopCircle {
+    right: -10.4vh;
+  }
+
+  .rightLineCircle {
+    right: -14.4vh;
+  }
+
+  .rightLineBotCircle {
+    right: -9vh;
+  }
+
+  .leftLineBotCircle {
+    left: -8vh;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 1366px) {
+  .leftBlockTextFade {
+    left: -30vh;
+    top: 10px;
+    margin-top: 0;
+  }
+
+  .rightBlockTextFade {
+    right: -30vh;
+    top: 0;
+    margin-top: 0;
+  }
+
+  .leftBlockTextBotFade {
+    left: -30vh;
+    top: 200px;
+    margin-top: 0;
+  }
+
+  .rightBlockTextMiddleFade {
+    right: -30vh;
+    margin-top: 0;
+    top: 200px;
+  }
+
+  .rightBlockTextBotFade {
+    top: 250px;
+    right: 0;
+  }
+
+  .dopStyleRotate {
+    display: none;
+  }
+
+  .section_02 {
+    padding: 5em !important;
+  }
+
+  .arcStyle {
+    overflow: visible;
   }
 }
